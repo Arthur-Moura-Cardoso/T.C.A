@@ -1,29 +1,40 @@
 
+::selection {
+    background-color: #7D5BA6;
+    color: #f1f1f1;
+}
+
 /* Estilização nav-bar */
 header a {
-    color: #fff;
+    color: #f1f1f1;
     text-decoration: none;
     transition: 0.3;
 }
 
-header a:hover {
+header a:hover {    
     color: #06b2a9;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 700;
 }
 
+.logo:hover {
+    color: #f1f1f1;
+}
+
 header {
+    position: fixed;
+    height: 8vh;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: #643173;
     font-family: 'Poppins', sans-serif;
-    height: 8vh;
 }
 
 .menu {
@@ -41,6 +52,80 @@ header {
     display: none;
 }
 
+/*Fim da Navbar*/
+
+
+/* Conteudo da página */
+
+main {
+    height: 100vh;
+    color: #1f1f1f;
+}
+
+
+.container {
+    font-family: 'Noto Sans', sans-serif;
+    padding-top: 14vh;
+}
+
+.apresentacao {
+    width: 35vw;
+    margin: auto;
+    padding-bottom: 1%;
+    height: fit-content;
+    border: 2px solid;
+    border-radius: 5px;
+    background: #f5f5dc;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.apresentacao h1 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 46px;
+    font-weight: bolder;
+}
+
+.apresentacao p {
+    max-width: 80%;
+    padding-top: 2%;
+    margin: auto;
+    font-size: 22px;
+    text-align: center;
+}
+
+hr {
+    margin: 5%;
+    border: 1px solid rgba(0, 0, 0, .30);
+}
+
+.text-um {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.text-um h2 {
+    margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.text-um p {
+    text-align: left;
+    max-width: 40vw;
+    margin: auto;
+    font-size: 22px;
+    padding-bottom: 12px;
+}
+
+.text-um img {
+    margin-top: 5%;
+    width: 80%;
+}
+
 @media (max-width: 800px) {
 
     /* Navbar */
@@ -48,7 +133,7 @@ header {
     #burger {
         margin-top: 0.5vh;
         display: block;
-        border-top: 2px solid #fff;
+        border-top: 2px solid #f1f1f1;
         width: 20px;
     }
     #burger::after, #burger::before {
@@ -82,7 +167,7 @@ header {
         background: none;
         border: none;
         cursor: pointer;
-        color: #fff;
+        color: #f1f1f1;
         font-family: 'Poppins', sans-serif;
         gap: 16px;
     }
@@ -124,5 +209,47 @@ header {
 
     .menu li:first-child{
         margin-top: 10%;
+    }
+
+    .logo {
+        padding: 4px;
+        font-size: 20px;
+    }
+    /*Fim da Navbar*/
+
+
+    /* Conteudo da página */
+
+    .container {
+        padding-top: 10vh;
+    }
+
+    .apresentacao {
+        width: 90%;
+        padding-bottom: 5%;
+    }
+
+    .apresentacao h1 {
+        font-size: 34px;
+    }
+
+    .apresentacao p {
+        max-width: 90%;
+        font-size: 20px;
+    }
+
+    .text-um {
+        display: block;
+    }
+
+    .text-um p {
+        max-width: 90%;
+        font-size: 20px;
+        padding-bottom: 16px;
+    }
+    
+    .text-um img {
+        margin-top: 5%;
+        width: 90%;
     }
 }
