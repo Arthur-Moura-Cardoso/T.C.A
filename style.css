@@ -30,6 +30,7 @@ header {
     position: fixed;
     height: 8vh;
     width: 100%;
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -84,6 +85,7 @@ main {
     text-align: center;
     font-size: 46px;
     font-weight: bolder;
+    letter-spacing: 2px;
 }
 
 .apresentacao p {
@@ -92,6 +94,23 @@ main {
     margin: auto;
     font-size: 22px;
     text-align: center;
+}
+
+.setinha {
+    display: block;
+    position: relative;
+    margin-top: 4%;
+    padding: 2%;
+}
+
+.setinha img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5%;
+    cursor: pointer;
+
+    animation: setinhaBaixo alternate 1s ease-in-out infinite;
 }
 
 hr {
@@ -103,14 +122,23 @@ hr {
     display: grid;
     grid-template-columns: 50% 50%;
     margin-left: 5%;
-    padding-bottom: 5%;
     text-align: center;
 }
 
 .text-um h2 {
+    width: fit-content;
+    margin: auto;
     margin-bottom: 16px;
+    padding-right: 5px;
     font-size: 36px;
     font-weight: bolder;
+    letter-spacing: 2px;
+
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: cursorPiscando 500ms steps(30) infinite normal,
+    escrevendo-Text-Um steps(30) 4s 1s normal both;
 }
 
 .text-um p {
@@ -126,6 +154,42 @@ hr {
     width: 80%;
 }
 
+/*Animação da sentinha*/
+@keyframes setinhaBaixo {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 5px;
+    }
+
+    100% {
+        top: 10px;
+    }
+}
+
+@keyframes cursorPiscando {
+    from {
+        border-right-color: rgba(0, 0, 0, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes escrevendo-Text-Um {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+
+/*Fim animação da Setinha*/
 @media (max-width: 800px) {
 
     /* Navbar */
@@ -238,14 +302,25 @@ hr {
         font-size: 20px;
     }
 
+    .setinha {
+        margin-top: 10%;
+        padding: 10%;
+    }
+
+    .setinha img {
+        width: 15%;
+    }
+
     .text-um {
         display: block;
+        margin-left: 0;
     }
 
     .text-um p {
         max-width: 90%;
         font-size: 20px;
         padding-bottom: 16px;
+        padding-left: 16px;
     }
     
     .text-um img {
