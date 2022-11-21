@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="Reset CSS/reset.css">
+    <link rel="stylesheet" href="/Main Page/Reset/reset.css">
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="Imagens/educacao-global.png">
@@ -27,10 +27,10 @@
             
 
             <ul class="menu">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Pesquisas</a></li>
-                <li><a href="">Ajuda</a></li>
+                <li class="link"> <a href="#inicio">Inicio</a> </li>
+                <li class="link"> <a href="#sobre">Sobre</a> </li>
+                <li class="link"> <a href="#inicio">Pesquisas</a> </li>
+                <li class="link"> <a href="#inicio">Ajuda</a> </li>
             </ul>
 
         </nav>
@@ -38,8 +38,11 @@
 
     <main>
 
+        <!-- Link inicio do menu -->
+        <a name="inicio"></a>
+
         <div class="container">
-            <div class="apresentacao">
+            <article class="apresentacao">
                     <h1>Nosso Trabalho!</h1>
 
                     <p>
@@ -55,7 +58,7 @@
                     </p>
 
                     <p>
-                        Como funciona o TCA? 
+                        Como funciona o TCA?
                     </p>
 
                     <p>
@@ -69,17 +72,20 @@
                         <br>
                         Obrigado pela a atenção, e tenha uma Boa Leitura!
                     </p>
-            </div>
+            </article>
 
             <div class="setinha">
-                <a href=""><img src="/Imagens/seta-para-baixo.png" alt=""></a>
+                <a href="#explicacao-um"><img src="Imagens/seta-para-baixo.png" alt=""></a>
             </div>
-
+            
+            
+            <a name="explicacao-um"></a>
             <hr>
-
-            <div class="text-um">
-                <div class="text">
-                    <h2>O que é o TCA?</h2>
+            
+            
+            <article class="explicacao text-um">
+                <div>
+                    <h1>O que é o TCA?</h1>
                     <p>
                         Conhecido como TCA o Trabalho Colaborativo de Autoria, inclui os três ultimos anos do ensino fundamental.
                         Com o objetivo de ampliar os saberes apropriados dos anos anteriores para uma melhor compreensão sobre a
@@ -97,23 +103,77 @@
                     </p>
 
                     <p>
-                        Esse trabalho também preza em aprimorar o reconhecimento das diferenças presentes em todo o cotidiano e a participação,
-                        efetiva, na tomada de decisões e propostas que visam transformar a sociedade atual, desenvolvendo um mundo melhor para todos.
+                        Esse trabalho também preza em aprimorar o reconhecimento das diferenças presentes em todo o cotidiano e a 
+                        participação efetiva, na tomada de decisões e propostas que visam transformar a sociedade atual, desenvolvendo
+                        um mundo melhor para todos.
                     </p>
+                    
                 </div>
 
                 <div class="imagem">
                     <img src="Imagens/livro.png" alt="">
                 </div>
                 
-            </div>
+            </article>
 
             <div class="setinha">
-                <a href=""><img src="Imagens/seta-para-baixo.png" alt=""></a>
+                <a href="#explicacao-dois"><img src="Imagens/seta-para-baixo.png" alt=""></a>
             </div>
-
+            
+            
+            <a name="explicacao-dois"></a>
             <hr>
 
+
+            <article class="explicacao text-dois">
+
+                <div class="imagem">
+                    <img src="Imagens/professor.png" alt="">
+                </div>
+
+                <div>
+                    <h1>Como o TCA funciona?</h1>
+                    <p>
+                        O TCA funciona da seguinte maneira... Ele é iniciado três anos antes da conclusão do ensino fundamental,
+                        porem, ele apenas é concluido no ultimo ano do ensino.
+                    </p>
+
+                    <p>
+                        Tudo tem inicio no 7° ano, onde os professores começam a introduzir o tema, e dar breves explicações sobre
+                        o que é o TCA.
+                    </p>
+
+                    <p>
+                        Já no 8° ano os professores começam a falar mais sobre como escolher o assunto do trabalho, e como podemos
+                        desenvolver o trabalho em cima desse tema. 
+                    </p>
+
+                    <p>
+                        E por ultimo, já no 9° ano, ultimo ano do ensino fundamental. Os grupos são formados, cada grupo escolhe um
+                        assunto e um professor para ajuda-los. Logo depois formulam seus trabalhos, e apresentam para um grupo de
+                        pessoas, e assim o ciclo do aluno no ensino fundamental é encerrado.
+                    </p>
+
+                    <a href="https://educacao.sme.prefeitura.sp.gov.br/ensino-fundamental-e-medio/trabalho-colaborativo-de-autoria/">
+                        Para mais informação sobre o TCA "Clique aqui"
+                    </a>
+
+                </div>
+                
+            </article>
+
+            <div class="setinha">
+                <a href="#explicacao-um"><img src="Imagens/seta-para-baixo.png" alt=""></a>
+            </div>
+
+            <!-- <a name="sobre"></a>
+            <hr>
+
+
+            <article class="sobre">
+                <h1>Sobre</h1>
+                <h2>O nosso trabalho</h2>
+            </article> -->
         </div>
     </main>
 
