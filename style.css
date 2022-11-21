@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 ::selection {
     background-color: #7D5BA6;
@@ -57,7 +60,6 @@ header {
 
 
 /* Conteudo da página */
-
 main {
     height: 100vh;
     color: #1f1f1f;
@@ -68,6 +70,8 @@ main {
     font-family: 'Noto Sans', sans-serif;
     padding-top: 14vh;
 }
+
+
 
 .apresentacao {
     width: 35vw;
@@ -118,14 +122,16 @@ hr {
     border: 1px solid rgba(0, 0, 0, .30);
 }
 
-.text-um {
+
+/* Conteudo explicando sobre oque é o tca */
+.explicacao {
     display: grid;
     grid-template-columns: 50% 50%;
     margin-left: 5%;
     text-align: center;
 }
 
-.text-um h2 {
+.explicacao h1 {
     width: fit-content;
     margin: auto;
     margin-bottom: 16px;
@@ -137,11 +143,9 @@ hr {
     border-right: 2px solid rgba(0, 0, 0, 0.75);
     white-space: nowrap;
     overflow: hidden;
-    animation: cursorPiscando 500ms steps(30) infinite normal,
-    escrevendo-Text-Um steps(30) 4s 1s normal both;
 }
 
-.text-um p {
+.explicacao p {
     text-align: left;
     max-width: 40vw;
     margin: auto;
@@ -149,10 +153,22 @@ hr {
     padding-bottom: 12px;
 }
 
-.text-um img {
+.explicacao img {
     margin-top: 5%;
     width: 80%;
 }
+
+.text-um h1 {
+    animation: cursorPiscando 500ms steps(30) infinite normal,
+    escrevendo-textUm steps(30) 4s 1s normal both;
+}
+
+.text-dois h1 {
+    animation: cursorPiscando 500ms steps(30) infinite normal,
+    escrevendo-textDois steps(30) 4s 1s normal both;
+}
+
+/* Parte explicando sobre o trabalho */
 
 /*Animação da sentinha*/
 @keyframes setinhaBaixo {
@@ -169,6 +185,7 @@ hr {
     }
 }
 
+/* Animaçâo de escrita */
 @keyframes cursorPiscando {
     from {
         border-right-color: rgba(0, 0, 0, 0.75);
@@ -179,7 +196,38 @@ hr {
     }
 }
 
-@keyframes escrevendo-Text-Um {
+@keyframes escrevendo-textUm {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+
+@keyframes escrevendo-textDois {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 450px;
+    }
+}
+
+/* Animação de escrita para mobile */
+@keyframes escrevendo-textUm-mobile {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 210px;
+    }
+}
+
+@keyframes escrevendo-textDois-mobile {
     from {
         width: 0;
     }
@@ -294,7 +342,8 @@ hr {
     }
 
     .apresentacao h1 {
-        font-size: 34px;
+        font-size: 30px;
+        padding-bottom: 15px;
     }
 
     .apresentacao p {
@@ -303,28 +352,46 @@ hr {
     }
 
     .setinha {
-        margin-top: 10%;
-        padding: 10%;
+        display: none;
     }
 
     .setinha img {
         width: 15%;
     }
 
-    .text-um {
+    .text-um, .text-dois {
         display: block;
         margin-left: 0;
     }
 
-    .text-um p {
+    .text-um p, .text-dois p {
         max-width: 90%;
         font-size: 20px;
         padding-bottom: 16px;
         padding-left: 16px;
     }
     
-    .text-um img {
+    .text-um img, .text-dois img {
         margin-top: 5%;
         width: 90%;
+    }
+    
+    .text-um h1, .text-dois h1 {
+        font-size: 24px;
+    }
+
+    .text-um h1 {
+        animation: cursorPiscando 500ms steps(30) infinite normal,
+        escrevendo-textUm-mobile steps(30) 4s 1s normal both;
+    }
+
+    .text-dois h1 {
+        animation: cursorPiscando 500ms steps(30) infinite normal,
+        escrevendo-textDois-mobile steps(30) 4s 1s normal both;
+    }
+
+    .text-dois a {
+        font-size: 12px;
+
     }
 }
