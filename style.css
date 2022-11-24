@@ -7,6 +7,14 @@ html {
     color: #f1f1f1;
 }
 
+p {
+    letter-spacing: 0.5px;
+}
+
+strong {
+    font-weight: bold;
+}
+
 /* Estilização nav-bar */
 header a {
     color: #f1f1f1;
@@ -119,7 +127,8 @@ main {
 
 hr {
     margin: 5%;
-    border: 1px solid rgba(0, 0, 0, .30);
+    border-top: 1px solid rgba(0, 0, 0, .30);
+    border-left: none;
 }
 
 
@@ -149,8 +158,9 @@ hr {
     text-align: left;
     max-width: 40vw;
     margin: auto;
+
     font-size: 22px;
-    padding-bottom: 12px;
+    padding-top: 2%;
 }
 
 .explicacao img {
@@ -160,15 +170,62 @@ hr {
 
 .text-um h1 {
     animation: cursorPiscando 500ms steps(30) infinite normal,
-    escrevendo-textUm steps(30) 4s 1s normal both;
+    escrevendo-textUm steps(30) 4s 1s  normal both;
 }
 
 .text-dois h1 {
     animation: cursorPiscando 500ms steps(30) infinite normal,
-    escrevendo-textDois steps(30) 4s 1s normal both;
+    escrevendo-textDois steps(30) 4s 1s  normal both;
+}
+
+.text-dois a {
+    display: block;
+    margin: 5% auto 0 auto;
+    width: fit-content;
 }
 
 /* Parte explicando sobre o trabalho */
+
+.sobre {
+    margin: 5%;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.sobre h1 {
+    font-size: 48px;
+    animation: esticando 1s alternate ease-in-out infinite;
+}
+
+.tema {
+    max-width: 80vw;
+    margin: auto;
+}
+
+.tema h2 {
+    margin-bottom: 8px;
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+.tema p {
+    margin: auto;
+    font-size: 22px;
+    padding-top: 2%;
+}
+
+.tema ul {
+    margin: 16px 5vw;
+}
+
+.tema li {
+    list-style: circle;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+
 
 /*Animação da sentinha*/
 @keyframes setinhaBaixo {
@@ -238,6 +295,17 @@ hr {
 }
 
 /*Fim animação da Setinha*/
+
+/* Animação do titulo esticando */
+@keyframes esticando {
+    0% {
+        letter-spacing: 2px;
+    }
+
+    100% {
+        letter-spacing: 4px;
+    }
+}
 @media (max-width: 800px) {
 
     /* Navbar */
@@ -391,7 +459,40 @@ hr {
     }
 
     .text-dois a {
-        font-size: 12px;
+        font-size: 16px;
 
+    }
+
+    .sobre {
+        margin: 10% 0;
+    }
+
+    .sobre h1 {
+        font-size: 26px;
+    }
+
+    .tema {
+        max-width: 100vw;
+    }
+
+    .tema h2 {
+        margin-bottom: 4px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .tema p {
+        max-width: 90%;
+        font-size: 20px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+    }
+
+    .tema ul {
+        margin-left: 15vw;
+    }
+
+    .tema li {
+        font-size: 16px;
     }
 }
