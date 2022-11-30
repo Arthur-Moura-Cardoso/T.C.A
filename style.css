@@ -19,10 +19,11 @@ strong {
 header a {
     color: #f1f1f1;
     text-decoration: none;
+    font-weight: bold;
     transition: 0.3;
 }
 
-header a:hover {    
+header a:hover {
     color: #06b2a9;
 }
 
@@ -220,9 +221,21 @@ hr {
 }
 
 .tema li {
-    list-style: circle;
     font-size: 18px;
     margin-top: 8px;
+}
+
+.tema li::before {
+  content: "⭑";
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+  right: 3px;
+}
+
+.processo > p {
+  font-size: 22px;
+  padding-bottom: 56px;
 }
 
 
@@ -303,7 +316,7 @@ hr {
     }
 
     100% {
-        letter-spacing: 4px;
+        letter-spacing: 6px;
     }
 }
 @media (max-width: 800px) {
@@ -361,7 +374,7 @@ hr {
         right: 0;
         background: #7D5BA6;
         z-index: 100;
-        
+
         transition: .3s ease-in;
         height: 0px;
         visibility: hidden;
@@ -438,12 +451,12 @@ hr {
         padding-bottom: 16px;
         padding-left: 16px;
     }
-    
+
     .text-um img, .text-dois img {
         margin-top: 5%;
         width: 90%;
     }
-    
+
     .text-um h1, .text-dois h1 {
         font-size: 24px;
     }
