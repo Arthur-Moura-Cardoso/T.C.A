@@ -9,6 +9,7 @@ html {
 
 p {
     letter-spacing: 0.5px;
+    line-height: 115%;
 }
 
 strong {
@@ -16,6 +17,19 @@ strong {
 }
 
 /* Estilização nav-bar */
+
+header {
+    position: fixed;
+    height: 8vh;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #643173;
+    font-family: 'Poppins', sans-serif;
+}
+
 header a {
     color: #f1f1f1;
     text-decoration: none;
@@ -32,22 +46,7 @@ header a:hover {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 700;
-}
-
-.logo:hover {
     color: #f1f1f1;
-}
-
-header {
-    position: fixed;
-    height: 8vh;
-    width: 100%;
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #643173;
-    font-family: 'Poppins', sans-serif;
 }
 
 .menu {
@@ -70,7 +69,7 @@ header {
 
 /* Conteudo da página */
 main {
-    height: 100vh;
+    height: 100%;
     color: #1f1f1f;
 }
 
@@ -93,7 +92,7 @@ main {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.apresentacao h1 {
+.apresentacao h2 {
     margin-top: 5%;
     text-align: center;
     font-size: 46px;
@@ -106,7 +105,30 @@ main {
     padding-top: 2%;
     margin: auto;
     font-size: 22px;
-    text-align: center;
+}
+
+.apresentacao ul {
+    margin-left: 20%;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.apresentacao li {
+    padding-top: 3%;
+}
+
+.apresentacao li::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+
+    position: relative;
+    right: 5px;
+    bottom: 1px;
+    background-color: #643173;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 .setinha {
@@ -141,7 +163,7 @@ hr {
     text-align: center;
 }
 
-.explicacao h1 {
+.explicacao h2 {
     width: fit-content;
     margin: auto;
     margin-bottom: 16px;
@@ -169,14 +191,14 @@ hr {
     width: 80%;
 }
 
-.text-um h1 {
+.text-um h2 {
     animation: cursorPiscando 500ms steps(30) infinite normal,
-    escrevendo-textUm steps(30) 4s 1s  normal both;
+        escrevendo-textUm steps(30) 4s 1s normal both;
 }
 
-.text-dois h1 {
+.text-dois h2 {
     animation: cursorPiscando 500ms steps(30) infinite normal,
-    escrevendo-textDois steps(30) 4s 1s  normal both;
+        escrevendo-textDois steps(30) 4s 1s normal both;
 }
 
 .text-dois a {
@@ -194,7 +216,7 @@ hr {
     text-align: center;
 }
 
-.sobre h1 {
+.sobre h2 {
     font-size: 48px;
     animation: esticando 1s alternate ease-in-out infinite;
 }
@@ -217,7 +239,7 @@ hr {
 }
 
 .tema ul {
-    margin: 16px 5vw;
+    margin: 16px 5vw 0;
 }
 
 .tema li {
@@ -226,19 +248,247 @@ hr {
 }
 
 .tema li::before {
-  content: "⭑";
-  font-size: 2em;
-  position: relative;
-  top: 3px;
-  right: 3px;
+    content: "⭑";
+    font-size: 2em;
+    position: relative;
+    top: 5px;
+    right: 1px;
 }
 
-.processo > p {
-  font-size: 22px;
-  padding-bottom: 56px;
+.escolha-tema p:last-child {
+    padding: 0;
+}
+
+/* parte que explica a criação do trablho*/
+
+.processo>p {
+    font-size: 22px;
+    padding: 1% 0;
+}
+
+.cartaz {
+    margin: 5% 0 0;
+}
+
+.site {
+    margin: 10% 0 0;
+}
+
+.cartaz h2,
+.site h2 {
+    text-align: center;
+}
+
+.cartaz p,
+.site p {
+    padding: 1% 0;
+}
+
+.imagens {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imagem-processo img {
+    width: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.imagem-processo img:hover {
+    opacity: 0.8;
+}
+
+.cartaz-1 p,
+.cartaz-2 p,
+.site-1 p,
+.site-2 p {
+    width: calc(90% - 10px);
+    height: 5vh;
+    padding: 5px 5px 15px;
+    position: relative;
+    bottom: 5%;
+
+    font-size: 18px;
+    text-align: center;
+    color: #f1f1f1;
+
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 0 0 10px 10px;
+}
+
+.site h2::before {
+    content: "</";
+    position: relative;
+
+
+    animation: esticandoDev-esquerda 1s alternate ease-in-out infinite;
+}
+
+.site h2::after {
+    content: ">";
+    position: relative;
+
+    animation: esticandoDev-direita 1s alternate ease-in-out infinite;
+}
+
+/* parte das pesquisas*/
+.pesquisas {
+    max-width: 80vw;
+    margin: 0 auto 5%;
+}
+
+.pesquisas h2 {
+    margin-bottom: 8px;
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+.pesquisas p {
+    font-size: 22px;
+    padding: 1% 0;
+}
+
+.tabela-pesquisas table {
+    margin: auto;
+}
+
+.tabela-pesquisas table,
+td,
+th,
+tr {
+    border: 2px solid black;
+}
+
+.tabela-pesquisas th {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.tabela-pesquisas li {
+    font-size: 18px;
+    margin: 2px 10px 4px;
+    padding: 3px;
+}
+
+.tabela-pesquisas li:nth-child(even) {
+    font-size: 14px;
+    margin-left: 5%;
+}
+
+.tabela-pesquisas li:nth-child(even)::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+
+    position: relative;
+    right: 3px;
+    bottom: 1px;
+    background-color: #643173;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.area-pesquisas {
+    margin-top: 5%;
+}
+
+.area-pesquisas p {
+    padding: 0.5% 0;
+}
+
+.area-pesquisas ul {
+    list-style: circle;
+    margin: 10px 0 10px 50px;
+    font-size: 20px;
+}
+
+.pesquisas ol {
+    list-style: decimal;
+    margin: 10px 0 10px 50px;
+    font-size: 20px;
+}
+
+.area-pesquisas li {
+    padding-bottom: 6px;
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: #643173;
+    color: white;
+    overflow: hidden;
+}
+
+footer img {
+    width: 25%;
+}
+
+.redes-sociais {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.redes-sociais ul {
+    padding-bottom: 2vh;
+}
+
+.redes-sociais li {
+    margin-bottom: 8px;
+}
+
+.redes-sociais a {
+    color: #06b2a9;
+}
+
+.rede-social-arthur ul {
+    display: inline-block;
 }
 
 
+.rede-social img {
+    height: 50px;
+    width: 50px;
+    margin: 10px 15px 0;
+    box-shadow: 0px 3px 5px #0e1d2f;
+}
+
+.github img {
+    border-radius: 100%;
+    margin-left: 15px;
+    filter: grayscale(85%);
+    transition: 600ms ease-in-out;
+}
+
+.github img:hover {
+    filter: none;
+}
+
+.insta img {
+    border-radius: 25px;
+    filter: grayscale(85%);
+    transition: 450ms ease-in-out;
+}
+
+.insta img:hover {
+    filter: none;
+}
+
+.insta {
+    margin-left: auto;
+}
+
+.marca-dagua {
+    margin-top: 2vh;
+    text-align: center;
+}
 
 /*Animação da sentinha*/
 @keyframes setinhaBaixo {
@@ -252,6 +502,27 @@ hr {
 
     100% {
         top: 10px;
+    }
+}
+
+/* animação dos sinais </ > piscando */
+@keyframes esticandoDev-esquerda {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 5px;
+    }
+}
+
+@keyframes esticandoDev-direita {
+    0% {
+        right: 0px;
+    }
+
+    100% {
+        right: 5px;
     }
 }
 
@@ -319,6 +590,7 @@ hr {
         letter-spacing: 6px;
     }
 }
+
 @media (max-width: 800px) {
 
     /* Navbar */
@@ -329,7 +601,9 @@ hr {
         border-top: 2px solid #f1f1f1;
         width: 20px;
     }
-    #burger::after, #burger::before {
+
+    #burger::after,
+    #burger::before {
         content: '';
         display: block;
         position: relative;
@@ -382,7 +656,7 @@ hr {
 
     }
 
-    nav.active .menu{
+    nav.active .menu {
         height: 92vh;
         visibility: visible;
         overflow-y: auto;
@@ -400,7 +674,7 @@ hr {
         border-bottom: 2px solid rgba(0, 0, 0, .10);
     }
 
-    .menu li:first-child{
+    .menu li:first-child {
         margin-top: 10%;
     }
 
@@ -408,6 +682,7 @@ hr {
         padding: 4px;
         font-size: 20px;
     }
+
     /*Fim da Navbar*/
 
 
@@ -422,7 +697,7 @@ hr {
         padding-bottom: 5%;
     }
 
-    .apresentacao h1 {
+    .apresentacao h2 {
         font-size: 30px;
         padding-bottom: 15px;
     }
@@ -440,47 +715,51 @@ hr {
         width: 15%;
     }
 
-    .text-um, .text-dois {
+    .text-um,
+    .text-dois {
         display: block;
         margin-left: 0;
     }
 
-    .text-um p, .text-dois p {
+    .text-um p,
+    .text-dois p {
         max-width: 90%;
         font-size: 20px;
         padding-bottom: 16px;
         padding-left: 16px;
     }
 
-    .text-um img, .text-dois img {
+    .text-um img,
+    .text-dois img {
         margin-top: 5%;
         width: 90%;
     }
 
-    .text-um h1, .text-dois h1 {
+    .text-um h2,
+    .text-dois h2 {
         font-size: 24px;
     }
 
-    .text-um h1 {
+    .text-um h2 {
         animation: cursorPiscando 500ms steps(30) infinite normal,
-        escrevendo-textUm-mobile steps(30) 4s 1s normal both;
+            escrevendo-textUm-mobile steps(30) 4s 1s normal both;
     }
 
-    .text-dois h1 {
+    .text-dois h2 {
         animation: cursorPiscando 500ms steps(30) infinite normal,
-        escrevendo-textDois-mobile steps(30) 4s 1s normal both;
+            escrevendo-textDois-mobile steps(30) 4s 1s normal both;
     }
 
     .text-dois a {
-         font-size: 14px;
-         max-width: 85vw;
+        font-size: 14px;
+        max-width: 85vw;
     }
 
     .sobre {
         margin: 10% 0;
     }
 
-    .sobre h1 {
+    .sobre h2 {
         font-size: 26px;
     }
 
@@ -507,5 +786,57 @@ hr {
 
     .tema li {
         font-size: 16px;
+    }
+
+    .imagens {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-processo {
+        margin-bottom: 2%;
+    }
+
+    .imagem-processo p {
+        padding: 5px;
+        height: fit-content;
+        font-size: 16px;
+    }
+
+    footer {
+        height: 45vh;
+    }
+
+    footer img {
+        display: none;
+    }
+
+    .redes-sociais {
+        display: block;
+        margin-top: 5%;
+    }
+
+    .redes-sociais div {
+        display: block;
+    }
+
+    .redes-sociais ul {
+        padding-bottom: 4vh;
+    }
+
+    .redes-sociais li {
+        margin-bottom: 8px;
+    }
+
+    .redes-sociais a {
+        color: #06b2a9;
+    }
+
+    .marca-dagua {
+        font-size: 14px;
+    }
+
+    .rede-social-arthur img {
+        display: inline-block;
+        margin-bottom: -25px;
     }
 }
