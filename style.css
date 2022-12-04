@@ -419,10 +419,11 @@ tr {
 
 footer {
     width: 100%;
-    height: 30vh;
+    height: auto;
     background-color: #643173;
     color: white;
     overflow: hidden;
+    padding-bottom: 10px;
 }
 
 footer img {
@@ -437,7 +438,10 @@ footer img {
 }
 
 .redes-sociais ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 2vh;
+    margin-top: 8px;
 }
 
 .redes-sociais li {
@@ -803,7 +807,7 @@ footer img {
     }
 
     footer {
-        height: 45vh;
+        padding-bottom: 25px;
     }
 
     footer img {
@@ -837,6 +841,5 @@ footer img {
 
     .rede-social-arthur img {
         display: inline-block;
-        margin-bottom: -25px;
     }
 }
